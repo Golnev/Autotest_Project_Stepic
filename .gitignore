@@ -3,3 +3,4 @@
 /geckodriver.log
 /__pycache__
 /.idea/
+/pages/__pycache__
