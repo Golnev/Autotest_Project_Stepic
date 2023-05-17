@@ -1,6 +1,11 @@
 from selenium.webdriver.common.by import By
 
 
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, 'span.btn-group > a')
+
+
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
 
@@ -20,5 +25,7 @@ class ProductPageLocators:
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages .alert:nth-child(1) .alertinner')
 
 
-class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+class BasketPageLocators:
+    BASKET_EMPTY_MESSAGE = (By.CSS_SELECTOR, '#content_inner > p')
+    BASKET = (By.CSS_SELECTOR, 'form#basket_formset')
+    BASKET_ITEMS = (By.CSS_SELECTOR, '.basket-items')
