@@ -6,8 +6,7 @@ class ProductPage(BasePage):
     def item_added_to_basket(self):
         self.add_item_to_basket()
         product_price = self.get_price_of_product()
-
-        basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE_MESSAGE).text
+        basket_price = self.get_visible_element(*ProductPageLocators.BASKET_PRICE_MESSAGE)
         assert product_price == basket_price, \
             f'wrong price of item in basket (received "{basket_price}", expected "{product_price}")'
 
@@ -32,7 +31,7 @@ class ProductPage(BasePage):
 
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
-            "Success message is presented, but should not be"
+            'Success message is presented, but should not be'
 
     def should_as_disappeared_success_message(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)

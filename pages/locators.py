@@ -2,9 +2,9 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
     BASKET_LINK = (By.CSS_SELECTOR, 'span.btn-group > a')
-    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    USER_ICON = (By.CSS_SELECTOR, '.icon-user')
 
 
 class MainPageLocators:
@@ -26,7 +26,7 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     PRODUCT_NAME_TITLE = (By.CSS_SELECTOR, '.product_main > h1')
     PRODUCT_NAME_MESSAGE = (By.CSS_SELECTOR, '.alertinner strong')
-    BASKET_PRICE_MESSAGE = (By.CSS_SELECTOR, '#messages p strong')
+    BASKET_PRICE_MESSAGE = (By.CSS_SELECTOR, '#messages > :nth-child(3) strong')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, '#messages .alert:nth-child(1) .alertinner')
 
 

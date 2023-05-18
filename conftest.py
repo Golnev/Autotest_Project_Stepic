@@ -25,10 +25,10 @@ def browser(request):
         from selenium.webdriver.firefox.options import Options
 
         options = Options()
-        options.set_preference("intl.accept_languages", user_language)
+        options.set_preference('intl.accept_languages', user_language)
         browser = webdriver.Firefox(options=options)
     else:
-        raise pytest.UsageError("--browser_name should be chrome or firefox")
+        raise pytest.UsageError('--browser_name should be chrome or firefox')
 
     yield browser
     print('\nquit browser')
